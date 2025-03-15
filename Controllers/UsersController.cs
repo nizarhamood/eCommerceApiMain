@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
-using eCommerceApi.Data;
-using eCommerceApi.Models;
+using eCommerceApiMain.Data;
+using eCommerceApiMain.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection.Metadata.Ecma335;
 
-namespace ecommerce.Controllers
+namespace eCommerceApiMain.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -42,7 +42,7 @@ namespace ecommerce.Controllers
         {
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
-            return CreatedAtAction(nameof(GetUser), new {id = user.userId}, user);
+            return CreatedAtAction(nameof(GetUser), new {id = user.Userid}, user);
         }
 
 
@@ -50,7 +50,7 @@ namespace ecommerce.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateUser(int id, User user)
         {
-            if( id != user.userId) return BadRequest();
+            if( id != user.Userid) return BadRequest();
 
             _context.Entry(user).State = EntityState.Modified;
             await _context.SaveChangesAsync();

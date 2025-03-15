@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using eCommerceApi.Data;
-using eCommerceApi.Models;
+using eCommerceApiMain.Data;
+using eCommerceApiMain.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection.Metadata.Ecma335;
 
@@ -39,7 +39,7 @@ namespace eCommerceApi.Controllers
         {
             _context.Products.Add(product);
             await _context.SaveChangesAsync();
-            return CreatedAtAction(nameof(GetProduct), new {id = product.ProductId}, product);
+            return CreatedAtAction(nameof(GetProduct), new {id = product.Productid}, product);
         }
 
 
@@ -47,7 +47,7 @@ namespace eCommerceApi.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateProduct(int id, Product product)
         {
-            if (id != product.ProductId) return BadRequest();
+            if (id != product.Productid) return BadRequest();
 
             _context.Entry(product).State = EntityState.Modified;
             await _context.SaveChangesAsync();
