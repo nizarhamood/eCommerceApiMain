@@ -1,7 +1,0 @@
-/Users/n/Projects/eCommerceApiMain/obj/Debug/net8.0/eCommerceApiMain.csproj.AssemblyReference.cache
-/Users/n/Projects/eCommerceApiMain/obj/Debug/net8.0/eCommerceApiMain.GeneratedMSBuildEditorConfig.editorconfig
-/Users/n/Projects/eCommerceApiMain/obj/Debug/net8.0/eCommerceApiMain.AssemblyInfoInputs.cache
-/Users/n/Projects/eCommerceApiMain/obj/Debug/net8.0/eCommerceApiMain.AssemblyInfo.cs
-/Users/n/Projects/eCommerceApiMain/obj/Debug/net8.0/eCommerceApiMain.csproj.CoreCompileInputs.cache
-/Users/n/Projects/eCommerceApiMain/obj/Debug/net8.0/eCommerceApiMain.MvcApplicationPartsAssemblyInfo.cs
-/Users/n/Projects/eCommerceApiMain/obj/Debug/net8.0/eCommerceApiMain.MvcApplicationPartsAssemblyInfo.cache

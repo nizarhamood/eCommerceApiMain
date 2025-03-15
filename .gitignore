@@ -1,0 +1,12 @@
+# Ignore appsettings.Development.json
+appsettings.Development.json
+
+# Ignore build and obj directories
+bin/
+obj/
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore log files
+*.log
