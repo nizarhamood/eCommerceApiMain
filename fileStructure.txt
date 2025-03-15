@@ -1,0 +1,123 @@
+Explanation of the Structure
+
+1. Controllers/ → Handles API requests and responses.
+2. Services/ → Business logic layer (orchestration, validations).
+3. Repositories/ → Data access layer (SQL queries, CRUD operations).
+4. Models/ → Database entity representations.
+5. Data/ → Database context (AppDbContext.cs).
+6. DTOs/ → Data Transfer Objects (input/output models).
+7. Mappings/ → AutoMapper for model <-> DTO transformations.
+8. Middleware/ → Global error handling and logging.
+9. Tests/ → Unit and integration tests.
+10. Dockerfile → Enables API to run in Docker containers.
+
+
+ECommerceAPI/
+│── ECommerceAPI.sln                  # Solution File
+│
+├── ECommerceAPI/                      # Main API project
+│   ├── Controllers/                   # API Controllers (Entry points for requests)
+│   │   ├── UsersController.cs
+│   │   ├── ProductsController.cs
+│   │   ├── OrdersController.cs
+│   │   ├── PaymentsController.cs
+│   │   ├── ShippingController.cs
+│   │   ├── ReviewsController.cs
+│   │   ├── DiscountsController.cs
+│   │   ├── CartController.cs
+│   │   ├── WishlistController.cs
+│   │   ├── InventoryController.cs
+│   │
+│   ├── Services/                      # Business Logic Layer (BLoC)
+│   │   ├── Interfaces/
+│   │   │   ├── IUserService.cs
+│   │   │   ├── IProductService.cs
+│   │   │   ├── IOrderService.cs
+│   │   │   ├── IPaymentService.cs
+│   │   │   ├── IShippingService.cs
+│   │   │   ├── IReviewService.cs
+│   │   │   ├── IDiscountService.cs
+│   │   │   ├── ICartService.cs
+│   │   │   ├── IWishlistService.cs
+│   │   │   ├── IInventoryService.cs
+│   │   ├── UserService.cs
+│   │   ├── ProductService.cs
+│   │   ├── OrderService.cs
+│   │   ├── PaymentService.cs
+│   │   ├── ShippingService.cs
+│   │   ├── ReviewService.cs
+│   │   ├── DiscountService.cs
+│   │   ├── CartService.cs
+│   │   ├── WishlistService.cs
+│   │   ├── InventoryService.cs
+│   │
+│   ├── Repositories/                   # Data Access Layer (Repositories)
+│   │   ├── Interfaces/
+│   │   │   ├── IUserRepository.cs
+│   │   │   ├── IProductRepository.cs
+│   │   │   ├── IOrderRepository.cs
+│   │   │   ├── IPaymentRepository.cs
+│   │   │   ├── IShippingRepository.cs
+│   │   │   ├── IReviewRepository.cs
+│   │   │   ├── IDiscountRepository.cs
+│   │   │   ├── ICartRepository.cs
+│   │   │   ├── IWishlistRepository.cs
+│   │   │   ├── IInventoryRepository.cs
+│   │   ├── UserRepository.cs
+│   │   ├── ProductRepository.cs
+│   │   ├── OrderRepository.cs
+│   │   ├── PaymentRepository.cs
+│   │   ├── ShippingRepository.cs
+│   │   ├── ReviewRepository.cs
+│   │   ├── DiscountRepository.cs
+│   │   ├── CartRepository.cs
+│   │   ├── WishlistRepository.cs
+│   │   ├── InventoryRepository.cs
+│   │
+│   ├── Models/                         # Data Models (Database Entities)
+│   │   ├── User.cs
+│   │   ├── Product.cs
+│   │   ├── Order.cs
+│   │   ├── OrderDetail.cs
+│   │   ├── Payment.cs
+│   │   ├── Shipping.cs
+│   │   ├── Review.cs
+│   │   ├── Discount.cs
+│   │   ├── Cart.cs
+│   │   ├── Wishlist.cs
+│   │   ├── Inventory.cs
+│   │
+│   ├── Data/                           # Database Context
+│   │   ├── AppDbContext.cs
+│   │
+│   ├── DTOs/                           # Data Transfer Objects (API request/response models)
+│   │   ├── UserDTO.cs
+│   │   ├── ProductDTO.cs
+│   │   ├── OrderDTO.cs
+│   │   ├── PaymentDTO.cs
+│   │   ├── ShippingDTO.cs
+│   │   ├── ReviewDTO.cs
+│   │   ├── DiscountDTO.cs
+│   │   ├── CartDTO.cs
+│   │   ├── WishlistDTO.cs
+│   │   ├── InventoryDTO.cs
+│   │
+│   ├── Mappings/                       # AutoMapper Profiles
+│   │   ├── MappingProfile.cs
+│   │
+│   ├── Middleware/                      # Custom Middlewares
+│   │   ├── ErrorHandlingMiddleware.cs
+│   │
+│   ├── Program.cs                      # Main entry point for application
+│   ├── appsettings.json                 # Configuration file
+│
+├── ECommerceAPI.Tests/                  # Unit and Integration Tests
+│   ├── Services/
+│   ├── Repositories/
+│   ├── Controllers/
+│   ├── Mocks/
+│   ├── ECommerceAPI.Tests.csproj
+│
+├── Dockerfile                           # Docker containerization setup
+├── .gitignore                           # Ignore unnecessary files in version control
+├── README.md                            # Project documentation
